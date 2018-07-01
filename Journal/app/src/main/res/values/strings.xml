@@ -1,4 +1,35 @@
 <resources>
-    <string name="app_name">Journal</string>
-    <string name="title_activity_note_list">NoteListActivity</string>
+    <string name="app_name">Journal App</string>
+    <string name="title_activity_note_list">My Journal</string>
+
+    <string name="welcome_card_text_heading">Welcome to My Journal</string>
+    <string name="welcome_card_text_body">Save memories, thoughts and your ideas as efficiently as possible. Click the pen button below to start writing now!</string>
+    <string name="new_note_app_bar_label">New note</string>
+    <string name="edit_note_app_bar_label">Edit Note</string>
+    <string name="save_error">Cannot save an empty note</string>
+    <string name="share_note_error">Nothing to share.</string>
+    <string name="share_note_chooser_title">Share journal</string>
+    <string name="delete_note_error">Cannot delete an empty note</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="confirm_dialog_text">Are you sure?</string>
+    <string name="delete_notes">Delete note</string>
+    <string name="note_updated">Note Updated</string>
+    <string name="confirm_save_text">Are you sure you want to save changes to this note?</string>
+    <string name="save_note_dialog_title">Save changes to note</string>
+    <string name="deleted_all_notes">All notes deleted</string>
+    <string name="delete_all_notes_alert_message">Are you sure you want to delete all saved notes?</string>
+    <string name="delete_all_notes_alert_title">Delete all notes</string>
+    <string name="sign_in_button_text">Sign In</string>
+    <string name="note_editor_hint">Start typing</string>
+    <string name="welcome_card_okay">Okay</string>
+    <string name="about_menu_title">About</string>
+    <string name="log_out_menu_label">Log out</string>
+    <string name="new_note_menu_label">Create a new note</string>
+    <string name="delete_all_notes_menu_item">Delete all notes</string>
+    <string name="about_app">My Journal was created by George Kurobara Benjamin, ad-group-14 for the ALC 3.0 7 Days of Code Challenge</string>
+    <string name="menu_delete_title">Delete</string>
+    <string name="menu_save_note_title">Save note</string>
+    <string name="menu_share_note_title">Share note</string>
+
+
 </resources>

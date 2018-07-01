@@ -1,3 +1,20 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="card_corner_radius">5dp</dimen>
+    <dimen name="welcome_card_margin">20dp</dimen>
+
+    <dimen name="emphasized_text">21sp</dimen>
+    <dimen name="sign_in_button_width">250dp</dimen>
+    <dimen name="sign_in_button_bottom_margin">100dp</dimen>
+    <dimen name="progress_bar_bottom_margin">20dp</dimen>
+    <dimen name="card_linear_layout_padding">10dp</dimen>
+    <dimen name="welcome_card_icon_height">200dp</dimen>
+    <dimen name="welcome_card_heading_top_margin">5dp</dimen>
+    <dimen name="root_layout_padding">16dp</dimen>
+    <dimen name="list_item_text_size">15sp</dimen>
+    <dimen name="list_item_date_margin_top">5dp</dimen>
+    <dimen name="list_item_icon_width">40dp</dimen>
+    <dimen name="list_item_icon_height">40dp</dimen>
 </resources>

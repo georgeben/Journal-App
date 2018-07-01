@@ -1,4 +1,4 @@
-package com.kurobarabenjamingeorge.journal;
+package com.kurobarabenjamingeorge.journalapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.kurobarabenjamingeorge.journal", appContext.getPackageName());
+        assertEquals("com.kurobarabenjamingeorge.journalapp", appContext.getPackageName());
     }
 }

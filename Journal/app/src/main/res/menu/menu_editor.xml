@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.plainolnotes.EditorActivity">
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/menu_delete_title"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:orderInCategory="300"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/menu_save_note_title"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="always"
+        android:orderInCategory="200" />
+
+    <item
+        android:id="@+id/action_share_note"
+        android:title="@string/menu_share_note_title"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always"
+        android:orderInCategory="100" />
+</menu>

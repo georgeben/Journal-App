@@ -1,4 +1,4 @@
-package com.kurobarabenjamingeorge.journal;
+package com.kurobarabenjamingeorge.journalapp;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -25,10 +26,13 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SignInButton mGoogleSignInButton;
+    //Declaration of member variables
+
+    private SignInButton mSignInButton;
     private FirebaseAuth mFirebaseAuth;
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 1;
+    private ProgressBar mSignInProgressBar;
 
     private static final String TAG = "Google sign in";
 
@@ -45,16 +49,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mSignInProgressBar = (ProgressBar) findViewById(R.id.signInProgressBar);
+        mSignInProgressBar.setVisibility(View.INVISIBLE);
+
+        //Handles exiting from the app
+        Intent intent = getIntent();
+        if(intent.hasExtra("EXIT")){
+            if(intent.getBooleanExtra("EXIT", false)){
+                finish();
+            }
+        }
+
         mFirebaseAuth = FirebaseAuth.getInstance();
 
-        mGoogleSignInButton = (SignInButton) findViewById(R.id.google_sign_in_btn);
 
-        mGoogleSignInButton.setOnClickListener(new View.OnClickListener() {
+        mSignInButton = (SignInButton) findViewById(R.id.googleSignIn);
+        mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mSignInProgressBar.setVisibility(View.VISIBLE);
                 signIn();
             }
         });
+
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -108,18 +125,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mFirebaseAuth.getCurrentUser();
-                            //updateUI(user);
+                            mSignInProgressBar.setVisibility(View.GONE);
                         } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            //Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
-                            //updateUI(null);
+                            Toast.makeText(MainActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
                         }
 
-                        // ...
                     }
                 });
     }

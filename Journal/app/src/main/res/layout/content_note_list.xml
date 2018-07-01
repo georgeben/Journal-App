@@ -5,15 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.kurobarabenjamingeorge.journal.NoteListActivity"
+    tools:context="com.kurobarabenjamingeorge.journalapp.NoteListActivity"
     tools:showIn="@layout/activity_note_list">
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_view"
+        android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:id="@+id/welcome_card"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/noteList">
+        android:layout_margin="@dimen/welcome_card_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_linear_layout_padding">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/welcome_card_icon_height"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/welcome_card_heading_top_margin"
+                android:text="@string/welcome_card_text_heading"
+                android:textColor="@color/primaryTextColour"
+                android:textSize="@dimen/emphasized_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_card_text_body"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:text="@string/welcome_card_okay"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/emphasized_text"
+                android:onClick="hideWelcomeCard"/>
+        </LinearLayout>
 
 
-    </android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </RelativeLayout>

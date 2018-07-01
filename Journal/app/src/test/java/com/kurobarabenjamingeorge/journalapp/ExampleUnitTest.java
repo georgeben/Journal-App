@@ -1,4 +1,4 @@
-package com.kurobarabenjamingeorge.journal;
+package com.kurobarabenjamingeorge.journalapp;
 
 import org.junit.Test;
 

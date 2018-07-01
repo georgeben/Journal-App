@@ -1,5 +1,5 @@
 # ALC-3.0-Journal-App
-Journal app for the ALC 3.0 7 days of Challengs
+Journal app for the ALC 3.0 7 days of Challenge
 
 ## Getting started
 - Clone or download the repository onto our local machine.
